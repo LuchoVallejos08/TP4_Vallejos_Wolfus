@@ -13,11 +13,13 @@
   "license": "ISC",
   "author": "",
   "type": "module",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "dayjs": "^1.11.20",
     "express": "^5.2.1"
   }
 }
