@@ -1,5 +1,5 @@
 import express from "express";
-import { mostrarHora } from "./time.js";
+import { mostrarFecha, mostrarHora } from "./time.js";
 
 const app = express();
 const port = 3000;
@@ -13,6 +13,11 @@ app.get('/hora', (req, res) => {
     const horaActual = mostrarHora();
     res.send(`La hora actual es: ${horaActual}`);
 })
+app.get('/fechaCompleta', (req, res) => {
+    const fechaActual = mostrarFecha();
+    res.send(`La hora actual es: ${fechaActual}`);
+})
+
 app.listen(port, () => {
     console.log(`Listening to http://localhost:${port}`);
 })
@@ -20,3 +25,4 @@ app.listen(port, () => {
 app.get("/error", (req, res) => {
     res.status(404).send("Página no encontrada");
 });
+
